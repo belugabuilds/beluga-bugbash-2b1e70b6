@@ -1,0 +1,24 @@
+{
+  "title": "BugBash",
+  "one_liner": "A lightweight client-side tool for logging, tagging, and triaging JavaScript bugs found during manual testing sessions.",
+  "problem_statement": "Frontend developers and QA testers need a fast, frictionless way to capture and organize bugs discovered during manual testing or bug bash sessions without setting up a full issue tracker. Bugs found in the moment often get lost or lack enough context to reproduce. BugBash gives teams a zero-setup scratchpad to record, categorize, and prioritize frontend errors before they hit production.",
+  "target_user": "Frontend developers, indie hackers, and small engineering teams who run manual bug bash sessions and need a quick way to capture JavaScript errors and UI regressions without spinning up Jira or a backend.",
+  "features": [
+    "Bug Logger: Quickly add a bug entry with a title, severity level (low/medium/high/critical), URL of the affected page, and freeform description — all saved instantly to localStorage.",
+    "Bug Board: A kanban-style or list view showing all logged bugs grouped by severity or status (open, in progress, resolved), with inline editing and one-click status updates.",
+    "Session Summary Export: Generate a plain-text or JSON summary of all bugs logged in the current session, copyable to clipboard for pasting into Slack, GitHub Issues, or a doc."
+  ],
+  "non_goals": [
+    "No backend storage, syncing, or real-time collaboration between users",
+    "No automatic JavaScript error capture or SDK integration — all entries are manual",
+    "No user accounts, login, or team management features",
+    "No screenshot or video recording capabilities"
+  ],
+  "technical_constraints": [
+    "Client-side only — no backend, API calls, or server-side rendering beyond Next.js static export",
+    "All data persisted exclusively via localStorage with no external database",
+    "No authentication or user identity of any kind",
+    "Built as a single-page Next.js app using React and Tailwind CSS",
+    "Must function fully offline after first load"
+  ]
+}
